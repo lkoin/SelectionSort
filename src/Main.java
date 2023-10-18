@@ -4,12 +4,41 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Podaj ilosc liczb zawartych w tablicy: ");
-        int SIZE = scanner.nextInt();
-        double[] array = fillArray(SIZE);
-        System.out.println(" ");
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(sort(array)[i] + ", ");
+        System.out.println("Wybierz opcje: ");
+        System.out.println("1. Generowanie tablicy o podanym rozmiarze");
+        System.out.println("2. Podanie liczb ręcznie po kolei do tablicy o podanym rozmiarze");
+        System.out.println("0. Wyjscie z programu");
+        boolean petla = true;
+        while (petla == true) {
+            int number = scanner.nextInt();
+            switch (number) {
+                case 1:
+                    System.out.println("Podaj ilosc liczb zawartych w tablicy: ");
+                    int SIZE = scanner.nextInt();
+                    double[] array = fillArray(SIZE);
+                    System.out.println(" ");
+                    for (int i = 0; i < array.length; i++) {
+                        System.out.print(sort(array)[i] + ", ");
+                    }
+                    break;
+                case 2:
+                    System.out.println("Podaj ilosc liczb zawartych w tablicy: ");
+                    SIZE = scanner.nextInt();
+                    double tablica[] = new double[SIZE];
+                    for (int i =0; i<SIZE;i++) {
+                        scanner.nextDouble();
+                    }
+                    System.out.println(" ");
+                    for (int i = 0; i < tablica.length; i++) {
+                        System.out.print(sort(tablica)[i] + ", ");
+                    }
+                    break;
+                case 0:
+                    System.out.println("Wyjscie z programu");
+                    petla = false;
+                    break;
+            }
+
         }
     }
     public static double[] sort(double tab[]) {
