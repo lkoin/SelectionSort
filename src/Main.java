@@ -4,12 +4,12 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Wybierz opcje: ");
-        System.out.println("1. Generowanie tablicy o podanym rozmiarze");
-        System.out.println("2. Podanie liczb ręcznie po kolei do tablicy o podanym rozmiarze");
-        System.out.println("0. Wyjscie z programu");
         boolean petla = true;
         while (petla == true) {
+            System.out.println("Wybierz opcje: ");
+            System.out.println("1. Generowanie tablicy o podanym rozmiarze");
+            System.out.println("2. Podanie liczb ręcznie po kolei do tablicy o podanym rozmiarze");
+            System.out.println("0. Wyjscie z programu");
             int number = scanner.nextInt();
             switch (number) {
                 case 1:
