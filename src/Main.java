@@ -26,12 +26,15 @@ public class Main {
                     SIZE = scanner.nextInt();
                     double tablica[] = new double[SIZE];
                     for (int i =0; i<SIZE;i++) {
-                        scanner.nextDouble();
+                        System.out.println("Podaj kolejna liczbe");
+                        tablica[i]=scanner.nextDouble();
+
                     }
                     System.out.println(" ");
                     for (int i = 0; i < tablica.length; i++) {
                         System.out.print(sort(tablica)[i] + ", ");
                     }
+                    System.out.println("");
                     break;
                 case 0:
                     System.out.println("Wyjscie z programu");
