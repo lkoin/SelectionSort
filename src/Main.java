@@ -15,7 +15,11 @@ public class Main {
                 case 1:
                     System.out.println("Podaj ilosc liczb zawartych w tablicy: ");
                     int SIZE = scanner.nextInt();
-                    double[] array = fillArray(SIZE);
+                    System.out.println("Podaj wartosc minimalna");
+                    int min = scanner.nextInt();
+                    System.out.println("Podaj wartosc maksymalna");
+                    int max = scanner.nextInt();
+                    double[] array = fillArray(SIZE,min,max);
                     System.out.println(" ");
                     for (int i = 0; i < array.length; i++) {
                         System.out.print(sort(array)[i] + ", ");
@@ -73,11 +77,11 @@ public class Main {
 
 
     }
-    public static double[] fillArray(int SIZE) {
+    public static double[] fillArray(int SIZE,int min,int max) {
         double array[] = new double[SIZE];
         System.out.println("Generowanie tablicy...");
         for (int i = 0; i < SIZE; i++) {
-            array[i] = randDouble(30, 70);
+            array[i] = randDouble(min, max);
             System.out.print(array[i] + ", ");
         }
         return array;
